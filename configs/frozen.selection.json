@@ -1,0 +1,176 @@
+{
+  "split": "dev",
+  "dataset_type": "synthetic",
+  "manifest_sha256": "e90403c60f17f47c5e273213e6316947c44ee6c69f429d6c627238e0237d00f5",
+  "objective": "max F1 then min FP; stable grid order",
+  "candidates": [
+    {
+      "config": {
+        "window_seconds": 60,
+        "min_queries": 10,
+        "min_unique_count": 10,
+        "high_query_count": 30,
+        "high_unique_ratio": 0.8,
+        "long_avg_subdomain": 25.0,
+        "high_avg_entropy": 3.6,
+        "alert_score": 60,
+        "min_independent_signals": 2
+      },
+      "metrics": {
+        "n": 21,
+        "tp": 6,
+        "fp": 3,
+        "tn": 9,
+        "fn": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0.25
+      }
+    },
+    {
+      "config": {
+        "window_seconds": 60,
+        "min_queries": 20,
+        "min_unique_count": 10,
+        "high_query_count": 30,
+        "high_unique_ratio": 0.8,
+        "long_avg_subdomain": 25.0,
+        "high_avg_entropy": 3.6,
+        "alert_score": 60,
+        "min_independent_signals": 2
+      },
+      "metrics": {
+        "n": 21,
+        "tp": 6,
+        "fp": 3,
+        "tn": 9,
+        "fn": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0.25
+      }
+    },
+    {
+      "config": {
+        "window_seconds": 60,
+        "min_queries": 10,
+        "min_unique_count": 10,
+        "high_query_count": 30,
+        "high_unique_ratio": 0.8,
+        "long_avg_subdomain": 25.0,
+        "high_avg_entropy": 3.6,
+        "alert_score": 75,
+        "min_independent_signals": 2
+      },
+      "metrics": {
+        "n": 21,
+        "tp": 6,
+        "fp": 3,
+        "tn": 9,
+        "fn": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0.25
+      }
+    },
+    {
+      "config": {
+        "window_seconds": 60,
+        "min_queries": 20,
+        "min_unique_count": 10,
+        "high_query_count": 30,
+        "high_unique_ratio": 0.8,
+        "long_avg_subdomain": 25.0,
+        "high_avg_entropy": 3.6,
+        "alert_score": 75,
+        "min_independent_signals": 2
+      },
+      "metrics": {
+        "n": 21,
+        "tp": 6,
+        "fp": 3,
+        "tn": 9,
+        "fn": 3,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "false_positive_rate": 0.25
+      }
+    },
+    {
+      "config": {
+        "window_seconds": 60,
+        "min_queries": 10,
+        "min_unique_count": 10,
+        "high_query_count": 30,
+        "high_unique_ratio": 0.8,
+        "long_avg_subdomain": 25.0,
+        "high_avg_entropy": 3.6,
+        "alert_score": 100,
+        "min_independent_signals": 2
+      },
+      "metrics": {
+        "n": 21,
+        "tp": 3,
+        "fp": 3,
+        "tn": 9,
+        "fn": 6,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "false_positive_rate": 0.25
+      }
+    },
+    {
+      "config": {
+        "window_seconds": 60,
+        "min_queries": 20,
+        "min_unique_count": 10,
+        "high_query_count": 30,
+        "high_unique_ratio": 0.8,
+        "long_avg_subdomain": 25.0,
+        "high_avg_entropy": 3.6,
+        "alert_score": 100,
+        "min_independent_signals": 2
+      },
+      "metrics": {
+        "n": 21,
+        "tp": 3,
+        "fp": 3,
+        "tn": 9,
+        "fn": 6,
+        "precision": 0.5,
+        "recall": 0.3333333333333333,
+        "f1": 0.4,
+        "false_positive_rate": 0.25
+      }
+    }
+  ],
+  "selected": {
+    "config": {
+      "window_seconds": 60,
+      "min_queries": 10,
+      "min_unique_count": 10,
+      "high_query_count": 30,
+      "high_unique_ratio": 0.8,
+      "long_avg_subdomain": 25.0,
+      "high_avg_entropy": 3.6,
+      "alert_score": 60,
+      "min_independent_signals": 2
+    },
+    "metrics": {
+      "n": 21,
+      "tp": 6,
+      "fp": 3,
+      "tn": 9,
+      "fn": 3,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "f1": 0.6666666666666666,
+      "false_positive_rate": 0.25
+    }
+  }
+}

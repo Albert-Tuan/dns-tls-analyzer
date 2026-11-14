@@ -1,0 +1,182 @@
+{
+  "dataset_type": "synthetic",
+  "split": "dev",
+  "window_seconds": 60,
+  "description": "Offline fixtures; not real malware/exfiltration",
+  "captures": [
+    {
+      "path": "dev.pcap",
+      "sha256": "e56ecbf942e78d6bec0accc25e2bf6b0de9b88a5d4e9c8be9575f673e24b46c1",
+      "labels": [
+        {
+          "src_ip": "192.0.2.10",
+          "registered_domain": "example.com",
+          "window_start": 1794000000,
+          "label": "benign",
+          "scenario": "ordinary",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.10",
+          "registered_domain": "example.com",
+          "window_start": 1794000060,
+          "label": "benign",
+          "scenario": "repeated",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.10",
+          "registered_domain": "example.com",
+          "window_start": 1794000120,
+          "label": "benign",
+          "scenario": "cdn_short",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.10",
+          "registered_domain": "example.com",
+          "window_start": 1794000180,
+          "label": "benign",
+          "scenario": "telemetry_long",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.10",
+          "registered_domain": "example.com",
+          "window_start": 1794000240,
+          "label": "tunnel",
+          "scenario": "tunnel_dense",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.10",
+          "registered_domain": "example.com",
+          "window_start": 1794000300,
+          "label": "tunnel",
+          "scenario": "tunnel_medium",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.10",
+          "registered_domain": "example.com",
+          "window_start": 1794000360,
+          "label": "tunnel",
+          "scenario": "tunnel_slow",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.11",
+          "registered_domain": "example.com",
+          "window_start": 1794000420,
+          "label": "benign",
+          "scenario": "ordinary",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.11",
+          "registered_domain": "example.com",
+          "window_start": 1794000480,
+          "label": "benign",
+          "scenario": "repeated",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.11",
+          "registered_domain": "example.com",
+          "window_start": 1794000540,
+          "label": "benign",
+          "scenario": "cdn_short",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.11",
+          "registered_domain": "example.com",
+          "window_start": 1794000600,
+          "label": "benign",
+          "scenario": "telemetry_long",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.11",
+          "registered_domain": "example.com",
+          "window_start": 1794000660,
+          "label": "tunnel",
+          "scenario": "tunnel_dense",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.11",
+          "registered_domain": "example.com",
+          "window_start": 1794000720,
+          "label": "tunnel",
+          "scenario": "tunnel_medium",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.11",
+          "registered_domain": "example.com",
+          "window_start": 1794000780,
+          "label": "tunnel",
+          "scenario": "tunnel_slow",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.12",
+          "registered_domain": "example.com",
+          "window_start": 1794000840,
+          "label": "benign",
+          "scenario": "ordinary",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.12",
+          "registered_domain": "example.com",
+          "window_start": 1794000900,
+          "label": "benign",
+          "scenario": "repeated",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.12",
+          "registered_domain": "example.com",
+          "window_start": 1794000960,
+          "label": "benign",
+          "scenario": "cdn_short",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.12",
+          "registered_domain": "example.com",
+          "window_start": 1794001020,
+          "label": "benign",
+          "scenario": "telemetry_long",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.12",
+          "registered_domain": "example.com",
+          "window_start": 1794001080,
+          "label": "tunnel",
+          "scenario": "tunnel_dense",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.12",
+          "registered_domain": "example.com",
+          "window_start": 1794001140,
+          "label": "tunnel",
+          "scenario": "tunnel_medium",
+          "provenance": "synthetic generator intent"
+        },
+        {
+          "src_ip": "192.0.2.12",
+          "registered_domain": "example.com",
+          "window_start": 1794001200,
+          "label": "tunnel",
+          "scenario": "tunnel_slow",
+          "provenance": "synthetic generator intent"
+        }
+      ]
+    }
+  ]
+}

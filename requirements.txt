@@ -1,0 +1,4 @@
+scapy>=2.5,<3
+tldextract>=5.3,<6
+dnspython>=2.6,<3
+pytest>=8,<10

@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": 1794000000.0,
+    "src_ip": "192.0.2.10",
+    "dst_ip": "192.0.2.53",
+    "dns_id": 0,
+    "is_query": true,
+    "qname": "www.example.com",
+    "registered_domain": "example.com",
+    "subdomain": "www",
+    "qtype": "A",
+    "rcode": null,
+    "packet_length": 75,
+    "frame_number": 1
+  },
+  {
+    "timestamp": 1794000000.1,
+    "src_ip": "192.0.2.53",
+    "dst_ip": "192.0.2.10",
+    "dns_id": 0,
+    "is_query": false,
+    "qname": "www.example.com",
+    "registered_domain": "example.com",
+    "subdomain": "www",
+    "qtype": "A",
+    "rcode": "NOERROR",
+    "packet_length": 106,
+    "frame_number": 2
+  }
+]

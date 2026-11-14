@@ -1,0 +1,21 @@
+{
+  "type": "synthetic",
+  "generator": "scripts.make_demo_pcap",
+  "seeds": {
+    "demo": 20261109,
+    "dev": 1211,
+    "test": 2011
+  },
+  "claims": "No real attack payload, no network transmission; labels reflect scenario intent.",
+  "files": {
+    "benign_dns.pcap": "e698a78501abd999f0605a7df88d0e3d61b448de4ff61611e7e0d56b346ba913",
+    "synthetic_tunnel_like_dns.pcap": "5cdcff2ffbdd00c1d00fd1d124ec9bdea66ef8be3b6b3b274bdc00e9b25dcc07",
+    "query_response.pcap": "33f4c758917ccf6b8d306f1b0eefaa11bceb090342f2a337070e5eea4a1bab16",
+    "empty.pcap": "acc530668c8bc60b2d229281130b1899bfc81d70fdada5c34b3236c628f739c8",
+    "no_dns.pcap": "908959023b4f882f7d2410d5d714f4f3e69f066394f1fd4ffea296e606645169",
+    "ipv6_dns.pcap": "4f6e90ac4d701b413aeae75d8f3e238f9fbf0a6b7794a5ddaadc64ecfd6d1ce6",
+    "dns.pcapng": "730f9962bfcda01dcfb6fc47c6b831d687335dd8571c47de82efe4ed262d65a1",
+    "dev.pcap": "e56ecbf942e78d6bec0accc25e2bf6b0de9b88a5d4e9c8be9575f673e24b46c1",
+    "test.pcap": "78b41105f99890a4223e25eb61e8c3b1680e5445f492067bc7bcc7547be3abb0"
+  }
+}

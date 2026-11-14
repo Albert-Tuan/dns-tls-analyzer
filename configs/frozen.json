@@ -1,0 +1,11 @@
+{
+  "window_seconds": 60,
+  "min_queries": 10,
+  "min_unique_count": 10,
+  "high_query_count": 30,
+  "high_unique_ratio": 0.8,
+  "long_avg_subdomain": 25.0,
+  "high_avg_entropy": 3.6,
+  "alert_score": 60,
+  "min_independent_signals": 2
+}
