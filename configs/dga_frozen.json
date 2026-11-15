@@ -1,0 +1,12 @@
+{
+  "min_label_length": 5,
+  "min_signal_groups": 2,
+  "weight_set": "equal",
+  "calibration_percentile": 90,
+  "ngram_score_threshold": 0.779542,
+  "entropy_threshold": 3.189898,
+  "digit_ratio_threshold": 0.0,
+  "vowel_ratio_threshold": 0.230769,
+  "length_threshold": 13.0,
+  "alert_score": 40
+}

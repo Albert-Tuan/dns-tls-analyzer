@@ -1,0 +1,557 @@
+{
+  "unit": "one row = one registered domain, scored on its DGA label",
+  "dataset": "samples/dga/dga_dataset.csv",
+  "dataset_sha256": "6fb2404c19bf9da9d13c0e3970e2fb55a4c587e409d7abb46eea17214b0fbe7b",
+  "config": {
+    "min_label_length": 5,
+    "min_signal_groups": 2,
+    "weight_set": "equal",
+    "calibration_percentile": 90,
+    "ngram_score_threshold": 0.779542,
+    "entropy_threshold": 3.189898,
+    "digit_ratio_threshold": 0.0,
+    "vowel_ratio_threshold": 0.230769,
+    "length_threshold": 13.0,
+    "alert_score": 40
+  },
+  "config_source": "configs/dga_frozen.json",
+  "dev_metrics": {
+    "unit": "registered domain",
+    "n": 5509,
+    "n_benign": 2745,
+    "n_dga": 2764,
+    "tp": 1946,
+    "fp": 280,
+    "tn": 2465,
+    "fn": 818,
+    "unknown": 0,
+    "precision": 0.8742138364779874,
+    "recall": 0.7040520984081042,
+    "f1": 0.7799599198396794,
+    "false_positive_rate": 0.10200364298724955,
+    "accuracy": 0.8006897803594119
+  },
+  "test_metrics": {
+    "unit": "registered domain",
+    "n": 13158,
+    "n_benign": 6522,
+    "n_dga": 6636,
+    "tp": 4796,
+    "fp": 654,
+    "tn": 5868,
+    "fn": 1840,
+    "unknown": 3,
+    "precision": 0.88,
+    "recall": 0.7227245328511152,
+    "f1": 0.7936455402945557,
+    "false_positive_rate": 0.10027598896044158,
+    "accuracy": 0.8104575163398693
+  },
+  "test_per_family": {
+    "alureon": {
+      "n": 146,
+      "flagged": 107,
+      "recall": 0.7328767123287672
+    },
+    "banjori": {
+      "n": 152,
+      "flagged": 152,
+      "recall": 1.0
+    },
+    "bedep": {
+      "n": 145,
+      "flagged": 144,
+      "recall": 0.993103448275862
+    },
+    "ccleaner": {
+      "n": 138,
+      "flagged": 137,
+      "recall": 0.9927536231884058
+    },
+    "chinad": {
+      "n": 140,
+      "flagged": 140,
+      "recall": 1.0
+    },
+    "cryptolocker": {
+      "n": 145,
+      "flagged": 131,
+      "recall": 0.903448275862069
+    },
+    "dircrypt": {
+      "n": 139,
+      "flagged": 117,
+      "recall": 0.841726618705036
+    },
+    "dyre": {
+      "n": 141,
+      "flagged": 141,
+      "recall": 1.0
+    },
+    "fobber_v1": {
+      "n": 149,
+      "flagged": 148,
+      "recall": 0.9932885906040269
+    },
+    "fobber_v2": {
+      "n": 134,
+      "flagged": 90,
+      "recall": 0.6716417910447762
+    },
+    "gozi_gpl": {
+      "n": 141,
+      "flagged": 117,
+      "recall": 0.8297872340425532
+    },
+    "gozi_luther": {
+      "n": 144,
+      "flagged": 105,
+      "recall": 0.7291666666666666
+    },
+    "gozi_nasa": {
+      "n": 138,
+      "flagged": 111,
+      "recall": 0.8043478260869565
+    },
+    "gozi_rfc4343": {
+      "n": 145,
+      "flagged": 109,
+      "recall": 0.7517241379310344
+    },
+    "kraken_v2": {
+      "n": 136,
+      "flagged": 98,
+      "recall": 0.7205882352941176
+    },
+    "legit": {
+      "n": 6522,
+      "flagged": 654,
+      "flag_rate": 0.10027598896044158
+    },
+    "locky": {
+      "n": 132,
+      "flagged": 108,
+      "recall": 0.8181818181818182
+    },
+    "matsnu": {
+      "n": 154,
+      "flagged": 64,
+      "recall": 0.4155844155844156
+    },
+    "murofet_v1": {
+      "n": 142,
+      "flagged": 142,
+      "recall": 1.0
+    },
+    "murofet_v2": {
+      "n": 137,
+      "flagged": 135,
+      "recall": 0.9854014598540146
+    },
+    "murofet_v3": {
+      "n": 141,
+      "flagged": 141,
+      "recall": 1.0
+    },
+    "necurs": {
+      "n": 144,
+      "flagged": 124,
+      "recall": 0.8611111111111112
+    },
+    "nymaim": {
+      "n": 147,
+      "flagged": 55,
+      "recall": 0.3741496598639456
+    },
+    "padcrypt": {
+      "n": 138,
+      "flagged": 113,
+      "recall": 0.8188405797101449
+    },
+    "pizd": {
+      "n": 141,
+      "flagged": 25,
+      "recall": 0.1773049645390071
+    },
+    "proslikefan": {
+      "n": 143,
+      "flagged": 91,
+      "recall": 0.6363636363636364
+    },
+    "pushdo": {
+      "n": 136,
+      "flagged": 24,
+      "recall": 0.17647058823529413
+    },
+    "pykspa": {
+      "n": 132,
+      "flagged": 84,
+      "recall": 0.6363636363636364
+    },
+    "pykspa_noise": {
+      "n": 142,
+      "flagged": 89,
+      "recall": 0.6267605633802817
+    },
+    "qadars": {
+      "n": 143,
+      "flagged": 142,
+      "recall": 0.993006993006993
+    },
+    "qakbot": {
+      "n": 145,
+      "flagged": 125,
+      "recall": 0.8620689655172413
+    },
+    "ramdo": {
+      "n": 147,
+      "flagged": 138,
+      "recall": 0.9387755102040817
+    },
+    "ramnit": {
+      "n": 146,
+      "flagged": 114,
+      "recall": 0.7808219178082192
+    },
+    "ranbyus_v1": {
+      "n": 132,
+      "flagged": 130,
+      "recall": 0.9848484848484849
+    },
+    "ranbyus_v2": {
+      "n": 124,
+      "flagged": 123,
+      "recall": 0.9919354838709677
+    },
+    "rovnix": {
+      "n": 146,
+      "flagged": 133,
+      "recall": 0.910958904109589
+    },
+    "shiotob": {
+      "n": 143,
+      "flagged": 143,
+      "recall": 1.0
+    },
+    "simda": {
+      "n": 140,
+      "flagged": 28,
+      "recall": 0.2
+    },
+    "sisron": {
+      "n": 141,
+      "flagged": 103,
+      "recall": 0.7304964539007093
+    },
+    "suppobox_1": {
+      "n": 138,
+      "flagged": 31,
+      "recall": 0.2246376811594203
+    },
+    "suppobox_2": {
+      "n": 136,
+      "flagged": 4,
+      "recall": 0.029411764705882353
+    },
+    "suppobox_3": {
+      "n": 142,
+      "flagged": 103,
+      "recall": 0.7253521126760564
+    },
+    "tempedreve": {
+      "n": 130,
+      "flagged": 95,
+      "recall": 0.7307692307692307
+    },
+    "tinba": {
+      "n": 145,
+      "flagged": 107,
+      "recall": 0.7379310344827587
+    },
+    "vawtrak_v1": {
+      "n": 138,
+      "flagged": 77,
+      "recall": 0.5579710144927537
+    },
+    "vawtrak_v2": {
+      "n": 142,
+      "flagged": 5,
+      "recall": 0.035211267605633804
+    },
+    "vawtrak_v3": {
+      "n": 145,
+      "flagged": 2,
+      "recall": 0.013793103448275862
+    },
+    "zeus-newgoz": {
+      "n": 151,
+      "flagged": 151,
+      "recall": 1.0
+    }
+  },
+  "test_false_positive_examples": [
+    {
+      "domain": "2agshdqwvcqs.website",
+      "family": "legit",
+      "score": 80,
+      "reasons": "unusual_ngrams;high_entropy;high_digit_ratio;low_vowel_ratio",
+      "length": 12,
+      "entropy": 3.2516,
+      "digit_ratio": 0.0833,
+      "vowel_ratio": 0.0909,
+      "ngram_score": 0.9343
+    },
+    {
+      "domain": "lostfilm-hd720.ru",
+      "family": "legit",
+      "score": 80,
+      "reasons": "high_entropy;high_digit_ratio;low_vowel_ratio;long_label",
+      "length": 14,
+      "entropy": 3.5466,
+      "digit_ratio": 0.2308,
+      "vowel_ratio": 0.2,
+      "ngram_score": 0.7002
+    },
+    {
+      "domain": "037hd.com",
+      "family": "legit",
+      "score": 60,
+      "reasons": "unusual_ngrams;high_digit_ratio;low_vowel_ratio",
+      "length": 5,
+      "entropy": 2.3219,
+      "digit_ratio": 0.6,
+      "vowel_ratio": 0.0,
+      "ngram_score": 0.9765
+    },
+    {
+      "domain": "123moviesfreeonline.com",
+      "family": "legit",
+      "score": 60,
+      "reasons": "high_entropy;high_digit_ratio;long_label",
+      "length": 19,
+      "entropy": 3.5111,
+      "digit_ratio": 0.1579,
+      "vowel_ratio": 0.5,
+      "ngram_score": 0.5921
+    },
+    {
+      "domain": "123rf.com",
+      "family": "legit",
+      "score": 60,
+      "reasons": "unusual_ngrams;high_digit_ratio;low_vowel_ratio",
+      "length": 5,
+      "entropy": 2.3219,
+      "digit_ratio": 0.6,
+      "vowel_ratio": 0.0,
+      "ngram_score": 0.9107
+    },
+    {
+      "domain": "17zwd.com",
+      "family": "legit",
+      "score": 60,
+      "reasons": "unusual_ngrams;high_digit_ratio;low_vowel_ratio",
+      "length": 5,
+      "entropy": 2.3219,
+      "digit_ratio": 0.4,
+      "vowel_ratio": 0.0,
+      "ngram_score": 1.0
+    },
+    {
+      "domain": "1xllns.host",
+      "family": "legit",
+      "score": 60,
+      "reasons": "unusual_ngrams;high_digit_ratio;low_vowel_ratio",
+      "length": 6,
+      "entropy": 2.2516,
+      "digit_ratio": 0.1667,
+      "vowel_ratio": 0.0,
+      "ngram_score": 0.933
+    },
+    {
+      "domain": "1xywva.host",
+      "family": "legit",
+      "score": 60,
+      "reasons": "unusual_ngrams;high_digit_ratio;low_vowel_ratio",
+      "length": 6,
+      "entropy": 2.585,
+      "digit_ratio": 0.1667,
+      "vowel_ratio": 0.2,
+      "ngram_score": 1.0
+    },
+    {
+      "domain": "24livenewspaper.com",
+      "family": "legit",
+      "score": 60,
+      "reasons": "high_entropy;high_digit_ratio;long_label",
+      "length": 15,
+      "entropy": 3.4566,
+      "digit_ratio": 0.1333,
+      "vowel_ratio": 0.3846,
+      "ngram_score": 0.5184
+    },
+    {
+      "domain": "2ch-c.net",
+      "family": "legit",
+      "score": 60,
+      "reasons": "unusual_ngrams;high_digit_ratio;low_vowel_ratio",
+      "length": 5,
+      "entropy": 1.5,
+      "digit_ratio": 0.25,
+      "vowel_ratio": 0.0,
+      "ngram_score": 1.0
+    }
+  ],
+  "test_false_negative_examples": [
+    {
+      "domain": "abkxakhbtu.com",
+      "family": "alureon",
+      "score": 20,
+      "reasons": "unusual_ngrams",
+      "length": 10,
+      "entropy": 2.7219,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.3,
+      "ngram_score": 0.9633
+    },
+    {
+      "domain": "edluldqibibgh.com",
+      "family": "bedep",
+      "score": 20,
+      "reasons": "unusual_ngrams",
+      "length": 13,
+      "entropy": 3.0851,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.3077,
+      "ngram_score": 0.8148
+    },
+    {
+      "domain": "ab3adedec590.com",
+      "family": "ccleaner",
+      "score": 20,
+      "reasons": "high_digit_ratio",
+      "length": 12,
+      "entropy": 3.085,
+      "digit_ratio": 0.3333,
+      "vowel_ratio": 0.5,
+      "ngram_score": 0.7458
+    },
+    {
+      "domain": "brjodsmdamurs.net",
+      "family": "cryptolocker",
+      "score": 20,
+      "reasons": "unusual_ngrams",
+      "length": 13,
+      "entropy": 3.0851,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.2308,
+      "ngram_score": 0.7976
+    },
+    {
+      "domain": "agqmecwc.com",
+      "family": "dircrypt",
+      "score": 20,
+      "reasons": "unusual_ngrams",
+      "length": 8,
+      "entropy": 2.75,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.25,
+      "ngram_score": 0.9349
+    },
+    {
+      "domain": "leriugutgeskvutgu.net",
+      "family": "fobber_v1",
+      "score": 20,
+      "reasons": "long_label",
+      "length": 17,
+      "entropy": 3.1019,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.4118,
+      "ngram_score": 0.7691
+    },
+    {
+      "domain": "aplowfpsos.com",
+      "family": "fobber_v2",
+      "score": 0,
+      "reasons": "",
+      "length": 10,
+      "entropy": 2.7219,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.3,
+      "ngram_score": 0.7261
+    },
+    {
+      "domain": "actuprotectionnapatenta.ru",
+      "family": "gozi_gpl",
+      "score": 20,
+      "reasons": "long_label",
+      "length": 23,
+      "entropy": 3.1164,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.4348,
+      "ngram_score": 0.3799
+    },
+    {
+      "domain": "causampenitentiacenties.com",
+      "family": "gozi_luther",
+      "score": 20,
+      "reasons": "long_label",
+      "length": 23,
+      "entropy": 3.1749,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.4783,
+      "ngram_score": 0.3619
+    },
+    {
+      "domain": "addedthereresearchcurrlo.com",
+      "family": "gozi_nasa",
+      "score": 20,
+      "reasons": "long_label",
+      "length": 24,
+      "entropy": 3.1694,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.375,
+      "ngram_score": 0.4815
+    },
+    {
+      "domain": "aeithercauseherein.com",
+      "family": "gozi_rfc4343",
+      "score": 20,
+      "reasons": "long_label",
+      "length": 18,
+      "entropy": 3.0805,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.5556,
+      "ngram_score": 0.4214
+    },
+    {
+      "domain": "axidnjlv.tv",
+      "family": "kraken_v2",
+      "score": 20,
+      "reasons": "unusual_ngrams",
+      "length": 8,
+      "entropy": 3.0,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.25,
+      "ngram_score": 0.8134
+    }
+  ],
+  "test_reason_counts": {
+    "benign": {
+      "unusual_ngrams": 988,
+      "label_too_short_for_scoring": 872,
+      "low_vowel_ratio": 804,
+      "high_digit_ratio": 578,
+      "high_entropy": 572,
+      "long_label": 463,
+      "idn_label_outside_reference_corpus": 3
+    },
+    "dga": {
+      "unusual_ngrams": 4254,
+      "high_entropy": 3498,
+      "long_label": 3424,
+      "low_vowel_ratio": 2575,
+      "high_digit_ratio": 1115
+    }
+  },
+  "interpretation": "score is a heuristic risk score, not a probability; benign = not flagged by rules"
+}
