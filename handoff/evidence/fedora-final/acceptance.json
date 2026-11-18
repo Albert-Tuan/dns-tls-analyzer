@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "created_at": "2026-11-18T14:50:29.524431+00:00",
+  "python": "3.14.10",
+  "platform": "Linux-7.2.15-200.fc44.x86_64-x86_64-with-glibc2.43",
+  "dependencies": {
+    "scapy": "2.8.0",
+    "dnspython": "2.9.2",
+    "tldextract": "5.4.0",
+    "pytest": "9.2.0"
+  },
+  "tshark_parity": "passed",
+  "dataset_type": "synthetic",
+  "steps": [
+    {
+      "step": "01_generate",
+      "command": [
+        "-m",
+        "scripts.make_demo_pcap"
+      ],
+      "exit_code": 0,
+      "log": "01_generate.log"
+    },
+    {
+      "step": "02_tests",
+      "command": [
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=reports/junit.xml"
+      ],
+      "exit_code": 0,
+      "log": "02_tests.log"
+    },
+    {
+      "step": "03_tune_dev",
+      "command": [
+        "-m",
+        "scripts.tune_thresholds",
+        "--manifest",
+        "samples/dev_manifest.json",
+        "--output",
+        "configs/frozen.json"
+      ],
+      "exit_code": 0,
+      "log": "03_tune_dev.log"
+    },
+    {
+      "step": "04_benign",
+      "command": [
+        "-m",
+        "scripts.run_tv2",
+        "--pcap",
+        "samples/benign_dns.pcap",
+        "--output",
+        "reports/benign_dns.json",
+        "--csv",
+        "reports/benign_dns.csv",
+        "--events-output",
+        "reports/benign_dns_events.json",
+        "--config",
+        "configs/frozen.json"
+      ],
+      "exit_code": 0,
+      "log": "04_benign.log"
+    },
+    {
+      "step": "05_tunnel",
+      "command": [
+        "-m",
+        "scripts.run_tv2",
+        "--pcap",
+        "samples/synthetic_tunnel_like_dns.pcap",
+        "--output",
+        "reports/synthetic_tunnel_like_dns.json",
+        "--csv",
+        "reports/synthetic_tunnel_like_dns.csv",
+        "--events-output",
+        "reports/synthetic_tunnel_like_dns_events.json",
+        "--config",
+        "configs/frozen.json"
+      ],
+      "exit_code": 0,
+      "log": "05_tunnel.log"
+    },
+    {
+      "step": "06_response",
+      "command": [
+        "-m",
+        "scripts.run_tv2",
+        "--pcap",
+        "samples/query_response.pcap",
+        "--output",
+        "reports/query_response.json",
+        "--csv",
+        "reports/query_response.csv",
+        "--events-output",
+        "reports/query_response_events.json",
+        "--config",
+        "configs/frozen.json"
+      ],
+      "exit_code": 0,
+      "log": "06_response.log"
+    },
+    {
+      "step": "07_eval_dev",
+      "command": [
+        "-m",
+        "scripts.evaluate_dataset",
+        "--manifest",
+        "samples/dev_manifest.json",
+        "--config",
+        "configs/frozen.json",
+        "--output",
+        "reports/dev_metrics.json"
+      ],
+      "exit_code": 0,
+      "log": "07_eval_dev.log"
+    },
+    {
+      "step": "08_eval_test",
+      "command": [
+        "-m",
+        "scripts.evaluate_dataset",
+        "--manifest",
+        "samples/test_manifest.json",
+        "--config",
+        "configs/frozen.json",
+        "--output",
+        "reports/test_metrics.json"
+      ],
+      "exit_code": 0,
+      "log": "08_eval_test.log"
+    },
+    {
+      "step": "09_integration",
+      "command": [
+        "-m",
+        "examples.integrate_tv3",
+        "--pcap",
+        "samples/synthetic_tunnel_like_dns.pcap",
+        "--config",
+        "configs/frozen.json",
+        "--output",
+        "reports/tv3_fragment.json"
+      ],
+      "exit_code": 0,
+      "log": "09_integration.log"
+    },
+    {
+      "step": "10_tshark_0",
+      "command": [
+        "-m",
+        "scripts.verify_tshark",
+        "--pcap",
+        "samples/benign_dns.pcap"
+      ],
+      "exit_code": 0,
+      "log": "10_tshark_0.log"
+    },
+    {
+      "step": "10_tshark_1",
+      "command": [
+        "-m",
+        "scripts.verify_tshark",
+        "--pcap",
+        "samples/synthetic_tunnel_like_dns.pcap"
+      ],
+      "exit_code": 0,
+      "log": "10_tshark_1.log"
+    },
+    {
+      "step": "10_tshark_2",
+      "command": [
+        "-m",
+        "scripts.verify_tshark",
+        "--pcap",
+        "samples/query_response.pcap"
+      ],
+      "exit_code": 0,
+      "log": "10_tshark_2.log"
+    },
+    {
+      "step": "10_tshark_3",
+      "command": [
+        "-m",
+        "scripts.verify_tshark",
+        "--pcap",
+        "samples/ipv6_dns.pcap"
+      ],
+      "exit_code": 0,
+      "log": "10_tshark_3.log"
+    },
+    {
+      "step": "10_tshark_4",
+      "command": [
+        "-m",
+        "scripts.verify_tshark",
+        "--pcap",
+        "samples/dns.pcapng"
+      ],
+      "exit_code": 0,
+      "log": "10_tshark_4.log"
+    }
+  ],
+  "error": null,
+  "integration_scope": "public contract + TV2 fragment; teammate implementations not supplied"
+}

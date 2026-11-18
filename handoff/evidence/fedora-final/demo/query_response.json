@@ -1,0 +1,111 @@
+{
+  "metadata": {
+    "report_version": "1.0",
+    "pcap_file": "query_response.pcap",
+    "pcap_format": "pcap",
+    "pcap_size_bytes": 237,
+    "pcap_sha256": "33f4c758917ccf6b8d306f1b0eefaa11bceb090342f2a337070e5eea4a1bab16",
+    "packet_count": 2,
+    "analyzed_at_utc": "2026-11-18T14:51:39+00:00",
+    "tshark": {
+      "available": true,
+      "version": "TShark (Wireshark) 4.6.9 (Git commit 2d548b197c75).",
+      "command": "/usr/bin/tshark",
+      "fields_supported": {
+        "tls.handshake.extensions_server_name": true,
+        "tls.handshake.version": true,
+        "tls.handshake.extensions.supported_version": true,
+        "tls.handshake.ciphersuite": true,
+        "tls.handshake.extensions_alpn_str": true,
+        "tls.handshake.extension.type": true,
+        "tls.handshake.ja3": true,
+        "tls.handshake.ja3s": true,
+        "tls.handshake.ja4": true
+      }
+    },
+    "module_status": {
+      "parse_dns_pcap": "ok",
+      "analyze_dns_domains": "ok",
+      "detect_tunnels": "ok",
+      "tls_extractor": "ok"
+    },
+    "packet_size_definition": {},
+    "warnings": [],
+    "python_version": "3.14.10"
+  },
+  "summary": {
+    "dns_event_count": 2,
+    "dga_findings_count": 1,
+    "dga_suspicious_count": 0,
+    "dns_tunnel_findings_count": 0,
+    "dns_tunnel_suspected_count": 0,
+    "tls_observation_count": 0,
+    "tls_fingerprint_status_counts": {
+      "complete": 0,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "tls_flows_with_ja3": 0,
+    "tls_flows_with_ja4": 0,
+    "tls_shared_ja3_groups": [],
+    "tls_shared_ja4_groups": [],
+    "disclaimer": "Kết quả DGA/DNS tunnel là dấu hiệu NGHI NGỜ theo quy tắc, chưa phải kết luận mẫu độc hại. JA3/JA3S/JA4 là dấu vân tay TLS, không tự kết luận độc hại; nhiều ứng dụng có thể chia sẻ cùng fingerprint. TLS 1.3 không để lộ Certificate khi quan sát thụ động; ECH có thể che SNI thật."
+  },
+  "dns_events_summary": {
+    "total_events": 2,
+    "query_count": 1,
+    "response_count": 1,
+    "unique_qnames": 1,
+    "qtype_counts": {
+      "A": 1
+    },
+    "top_registered_domains": [
+      {
+        "registered_domain": "example.com",
+        "query_count": 1
+      }
+    ],
+    "first_timestamp": 1794000000.0,
+    "last_timestamp": 1794000000.1
+  },
+  "dga_findings": [
+    {
+      "detector": "dga",
+      "target": "example.com",
+      "registered_domain": "example.com",
+      "dga_label": "example",
+      "classification": "benign",
+      "score": 0,
+      "features": {
+        "length": 7,
+        "entropy": 2.5216,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.4286,
+        "unique_character_ratio": 0.8571,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.2554,
+        "trigram_rarity": 0.3859,
+        "ngram_score": 0.3859,
+        "unseen_ngram_ratio": 0.0,
+        "domain_length": 11
+      },
+      "reasons": [],
+      "signal_groups": [],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.example.com"
+        ],
+        "src_ips": [
+          "192.0.2.10"
+        ],
+        "first_timestamp": 1794000000.0,
+        "first_frame": 1
+      }
+    }
+  ],
+  "dns_tunnel_findings": [],
+  "tls_observations": []
+}

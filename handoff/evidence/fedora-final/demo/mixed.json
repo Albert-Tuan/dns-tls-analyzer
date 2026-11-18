@@ -1,0 +1,669 @@
+{
+  "metadata": {
+    "report_version": "1.0",
+    "pcap_file": "demo_mix_tls12.pcap",
+    "pcap_format": "pcap",
+    "pcap_size_bytes": 10623,
+    "pcap_sha256": "0f1a84ecb9185fafa9de85ec02edc10aaeb7250448d3a810dbc51905ab5d682b",
+    "packet_count": 73,
+    "analyzed_at_utc": "2026-11-18T14:52:23+00:00",
+    "tshark": {
+      "available": true,
+      "version": "TShark (Wireshark) 4.6.9 (Git commit 2d548b197c75).",
+      "command": "/usr/bin/tshark",
+      "fields_supported": {
+        "tls.handshake.extensions_server_name": true,
+        "tls.handshake.version": true,
+        "tls.handshake.extensions.supported_version": true,
+        "tls.handshake.ciphersuite": true,
+        "tls.handshake.extensions_alpn_str": true,
+        "tls.handshake.extension.type": true,
+        "tls.handshake.ja3": true,
+        "tls.handshake.ja3s": true,
+        "tls.handshake.ja4": true
+      }
+    },
+    "module_status": {
+      "parse_dns_pcap": "ok",
+      "analyze_dns_domains": "ok",
+      "detect_tunnels": "ok",
+      "tls_extractor": "ok"
+    },
+    "packet_size_definition": {
+      "length_field": "frame.len",
+      "sign": "+ = client->server, - = server->client",
+      "counted_packets": "chỉ packet có payload TCP (tcp.len > 0)",
+      "retransmissions": "bỏ qua packet TShark đánh dấu retransmission",
+      "max_packets": 50
+    },
+    "warnings": [],
+    "python_version": "3.14.10"
+  },
+  "summary": {
+    "dns_event_count": 64,
+    "dga_findings_count": 11,
+    "dga_suspicious_count": 5,
+    "dns_tunnel_findings_count": 1,
+    "dns_tunnel_suspected_count": 1,
+    "tls_observation_count": 1,
+    "tls_fingerprint_status_counts": {
+      "complete": 1,
+      "partial": 0,
+      "unavailable": 0
+    },
+    "tls_flows_with_ja3": 1,
+    "tls_flows_with_ja4": 1,
+    "tls_shared_ja3_groups": [],
+    "tls_shared_ja4_groups": [],
+    "disclaimer": "Kết quả DGA/DNS tunnel là dấu hiệu NGHI NGỜ theo quy tắc, chưa phải kết luận mẫu độc hại. JA3/JA3S/JA4 là dấu vân tay TLS, không tự kết luận độc hại; nhiều ứng dụng có thể chia sẻ cùng fingerprint. TLS 1.3 không để lộ Certificate khi quan sát thụ động; ECH có thể che SNI thật."
+  },
+  "dns_events_summary": {
+    "total_events": 64,
+    "query_count": 52,
+    "response_count": 12,
+    "unique_qnames": 52,
+    "qtype_counts": {
+      "TXT": 40,
+      "A": 12
+    },
+    "top_registered_domains": [
+      {
+        "registered_domain": "example.com",
+        "query_count": 40
+      },
+      {
+        "registered_domain": "p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+        "query_count": 3
+      },
+      {
+        "registered_domain": "siriusxm.com",
+        "query_count": 1
+      },
+      {
+        "registered_domain": "downloadha.com",
+        "query_count": 1
+      },
+      {
+        "registered_domain": "minecraftforge.net",
+        "query_count": 1
+      },
+      {
+        "registered_domain": "linkstars.com",
+        "query_count": 1
+      },
+      {
+        "registered_domain": "cartoonhd.co",
+        "query_count": 1
+      },
+      {
+        "registered_domain": "piqmkmmabrutqy.cc",
+        "query_count": 1
+      },
+      {
+        "registered_domain": "fyllaztzuud.com",
+        "query_count": 1
+      },
+      {
+        "registered_domain": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru",
+        "query_count": 1
+      }
+    ],
+    "first_timestamp": 1794000000.0,
+    "last_timestamp": 1794000039.0
+  },
+  "dga_findings": [
+    {
+      "detector": "dga",
+      "target": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru",
+      "registered_domain": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru",
+      "dga_label": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz",
+      "classification": "suspicious_dga",
+      "score": 100,
+      "features": {
+        "length": 43,
+        "entropy": 4.284,
+        "digit_ratio": 0.5116,
+        "vowel_ratio": 0.1905,
+        "unique_character_ratio": 0.5349,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.8179,
+        "trigram_rarity": 0.9931,
+        "ngram_score": 0.9931,
+        "unseen_ngram_ratio": 0.9512,
+        "domain_length": 46
+      },
+      "reasons": [
+        "unusual_ngrams",
+        "high_entropy",
+        "high_digit_ratio",
+        "low_vowel_ratio",
+        "long_label"
+      ],
+      "signal_groups": [
+        "composition",
+        "length",
+        "ngram",
+        "randomness"
+      ],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000007.0,
+        "first_frame": 23
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+      "registered_domain": "p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+      "dga_label": "p8e14fc63b0cb6dd1bb2dd4b9e86969393",
+      "classification": "suspicious_dga",
+      "score": 100,
+      "features": {
+        "length": 34,
+        "entropy": 3.6062,
+        "digit_ratio": 0.5588,
+        "vowel_ratio": 0.1333,
+        "unique_character_ratio": 0.4118,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.8281,
+        "trigram_rarity": 0.9767,
+        "ngram_score": 0.9767,
+        "unseen_ngram_ratio": 0.875,
+        "domain_length": 37
+      },
+      "reasons": [
+        "unusual_ngrams",
+        "high_entropy",
+        "high_digit_ratio",
+        "low_vowel_ratio",
+        "long_label"
+      ],
+      "signal_groups": [
+        "composition",
+        "length",
+        "ngram",
+        "randomness"
+      ],
+      "eligible": true,
+      "observations": {
+        "query_count": 3,
+        "unique_qnames": 3,
+        "sample_qnames": [
+          "a.p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+          "b.p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+          "c.p8e14fc63b0cb6dd1bb2dd4b9e86969393.so"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000009.0,
+        "first_frame": 29
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "piqmkmmabrutqy.cc",
+      "registered_domain": "piqmkmmabrutqy.cc",
+      "dga_label": "piqmkmmabrutqy",
+      "classification": "suspicious_dga",
+      "score": 80,
+      "features": {
+        "length": 14,
+        "entropy": 3.3249,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.2143,
+        "unique_character_ratio": 0.7857,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.5386,
+        "trigram_rarity": 0.8429,
+        "ngram_score": 0.8429,
+        "unseen_ngram_ratio": 0.5833,
+        "domain_length": 17
+      },
+      "reasons": [
+        "unusual_ngrams",
+        "high_entropy",
+        "low_vowel_ratio",
+        "long_label"
+      ],
+      "signal_groups": [
+        "composition",
+        "length",
+        "ngram",
+        "randomness"
+      ],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.piqmkmmabrutqy.cc"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000005.0,
+        "first_frame": 17
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "mekoadamnblecdfd.org",
+      "registered_domain": "mekoadamnblecdfd.org",
+      "dga_label": "mekoadamnblecdfd",
+      "classification": "suspicious_dga",
+      "score": 40,
+      "features": {
+        "length": 16,
+        "entropy": 3.3278,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.3125,
+        "unique_character_ratio": 0.6875,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.4371,
+        "trigram_rarity": 0.771,
+        "ngram_score": 0.771,
+        "unseen_ngram_ratio": 0.4286,
+        "domain_length": 20
+      },
+      "reasons": [
+        "high_entropy",
+        "long_label"
+      ],
+      "signal_groups": [
+        "length",
+        "randomness"
+      ],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.mekoadamnblecdfd.org"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000008.0,
+        "first_frame": 26
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "minecraftforge.net",
+      "registered_domain": "minecraftforge.net",
+      "dga_label": "minecraftforge",
+      "classification": "suspicious_dga",
+      "score": 40,
+      "features": {
+        "length": 14,
+        "entropy": 3.3788,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.3571,
+        "unique_character_ratio": 0.7857,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.2417,
+        "trigram_rarity": 0.4713,
+        "ngram_score": 0.4713,
+        "unseen_ngram_ratio": 0.0833,
+        "domain_length": 18
+      },
+      "reasons": [
+        "high_entropy",
+        "long_label"
+      ],
+      "signal_groups": [
+        "length",
+        "randomness"
+      ],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.minecraftforge.net"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000002.0,
+        "first_frame": 8
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "fyllaztzuud.com",
+      "registered_domain": "fyllaztzuud.com",
+      "dga_label": "fyllaztzuud",
+      "classification": "benign",
+      "score": 20,
+      "features": {
+        "length": 11,
+        "entropy": 2.914,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.2727,
+        "unique_character_ratio": 0.7273,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.5019,
+        "trigram_rarity": 0.8851,
+        "ngram_score": 0.8851,
+        "unseen_ngram_ratio": 0.6667,
+        "domain_length": 15
+      },
+      "reasons": [
+        "unusual_ngrams"
+      ],
+      "signal_groups": [
+        "ngram"
+      ],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.fyllaztzuud.com"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000006.0,
+        "first_frame": 20
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "linkstars.com",
+      "registered_domain": "linkstars.com",
+      "dga_label": "linkstars",
+      "classification": "benign",
+      "score": 20,
+      "features": {
+        "length": 9,
+        "entropy": 2.9477,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.2222,
+        "unique_character_ratio": 0.8889,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.1905,
+        "trigram_rarity": 0.4496,
+        "ngram_score": 0.4496,
+        "unseen_ngram_ratio": 0.0,
+        "domain_length": 13
+      },
+      "reasons": [
+        "low_vowel_ratio"
+      ],
+      "signal_groups": [
+        "composition"
+      ],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.linkstars.com"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000003.0,
+        "first_frame": 11
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "cartoonhd.co",
+      "registered_domain": "cartoonhd.co",
+      "dga_label": "cartoonhd",
+      "classification": "benign",
+      "score": 0,
+      "features": {
+        "length": 9,
+        "entropy": 2.9477,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.3333,
+        "unique_character_ratio": 0.8889,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.2547,
+        "trigram_rarity": 0.5909,
+        "ngram_score": 0.5909,
+        "unseen_ngram_ratio": 0.1429,
+        "domain_length": 12
+      },
+      "reasons": [],
+      "signal_groups": [],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.cartoonhd.co"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000004.0,
+        "first_frame": 14
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "downloadha.com",
+      "registered_domain": "downloadha.com",
+      "dga_label": "downloadha",
+      "classification": "benign",
+      "score": 0,
+      "features": {
+        "length": 10,
+        "entropy": 2.7219,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.4,
+        "unique_character_ratio": 0.7,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.3072,
+        "trigram_rarity": 0.6079,
+        "ngram_score": 0.6079,
+        "unseen_ngram_ratio": 0.0,
+        "domain_length": 14
+      },
+      "reasons": [],
+      "signal_groups": [],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.downloadha.com"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000001.0,
+        "first_frame": 5
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "example.com",
+      "registered_domain": "example.com",
+      "dga_label": "example",
+      "classification": "benign",
+      "score": 0,
+      "features": {
+        "length": 7,
+        "entropy": 2.5216,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.4286,
+        "unique_character_ratio": 0.8571,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.2554,
+        "trigram_rarity": 0.3859,
+        "ngram_score": 0.3859,
+        "unseen_ngram_ratio": 0.0,
+        "domain_length": 11
+      },
+      "reasons": [],
+      "signal_groups": [],
+      "eligible": true,
+      "observations": {
+        "query_count": 40,
+        "unique_qnames": 40,
+        "sample_qnames": [
+          "18hzsa9tcmsaferg6xe4zh3mfah5r5u7xeqqy4.example.com",
+          "2rt486hrt85t5dk18qqavr8xvf2qig72vsgem8.example.com",
+          "2v2d7yoizkz847m9rrny6gpsa48bnn2ygkh2ig.example.com"
+        ],
+        "src_ips": [
+          "192.0.2.11"
+        ],
+        "first_timestamp": 1794000000.0,
+        "first_frame": 1
+      }
+    },
+    {
+      "detector": "dga",
+      "target": "siriusxm.com",
+      "registered_domain": "siriusxm.com",
+      "dga_label": "siriusxm",
+      "classification": "benign",
+      "score": 0,
+      "features": {
+        "length": 8,
+        "entropy": 2.5,
+        "digit_ratio": 0.0,
+        "vowel_ratio": 0.375,
+        "unique_character_ratio": 0.75,
+        "hyphen_count": 0,
+        "bigram_rarity": 0.443,
+        "trigram_rarity": 0.7293,
+        "ngram_score": 0.7293,
+        "unseen_ngram_ratio": 0.3333,
+        "domain_length": 12
+      },
+      "reasons": [],
+      "signal_groups": [],
+      "eligible": true,
+      "observations": {
+        "query_count": 1,
+        "unique_qnames": 1,
+        "sample_qnames": [
+          "www.siriusxm.com"
+        ],
+        "src_ips": [
+          "192.0.2.20"
+        ],
+        "first_timestamp": 1794000000.0,
+        "first_frame": 2
+      }
+    }
+  ],
+  "dns_tunnel_findings": [
+    {
+      "detector": "dns_tunnel",
+      "classification": "suspected_dns_tunnel",
+      "src_ip": "192.0.2.11",
+      "registered_domain": "example.com",
+      "window_start": 1794000000.0,
+      "window_seconds": 60,
+      "score": 100,
+      "features": {
+        "query_count": 40,
+        "unique_qnames": 40,
+        "unique_subdomain_count": 40,
+        "unique_subdomain_ratio": 1.0,
+        "avg_subdomain_length": 38,
+        "max_subdomain_length": 38,
+        "avg_subdomain_entropy": 4.404893792674205,
+        "qtype_distribution": {
+          "TXT": 40
+        },
+        "txt_ratio": 1.0,
+        "queries_per_second": 0.6666666666666666,
+        "mean_interarrival_seconds": 1.0,
+        "interarrival_cv": 0.0,
+        "nxdomain_ratio": null
+      },
+      "reasons": [
+        "high_query_count",
+        "many_unique_subdomains",
+        "long_subdomain_labels",
+        "high_subdomain_entropy"
+      ],
+      "signal_groups": [
+        "diversity",
+        "shape",
+        "volume"
+      ],
+      "eligible": true
+    }
+  ],
+  "tls_observations": [
+    {
+      "record_type": "tls_observation",
+      "flow_id": "demo_mix_tls12.pcap:tcp:0",
+      "src_ip": "192.0.2.20",
+      "dst_ip": "192.0.2.21",
+      "sni": "demo.example.test",
+      "ja3": "196ca7f20d1ace3acb0125b56fe2e6fe",
+      "ja3s": "895252f3ce80cebf7a8837be83ec8e16",
+      "ja4": "t12d1409h1_1257f90867e7_36cef8aed422",
+      "fingerprint_status": "complete",
+      "packet_sizes_signed": [
+        260,
+        -1309,
+        147,
+        -312,
+        126,
+        -123
+      ],
+      "tcp_stream": 0,
+      "src_port": 49000,
+      "dst_port": 443,
+      "timestamp": 1794000050.06,
+      "first_frame": 68,
+      "handshakes_observed": [
+        "client_hello",
+        "server_hello"
+      ],
+      "client_hello_version": "TLS 1.2",
+      "client_supported_versions": [],
+      "negotiated_version": "TLS 1.2",
+      "cipher_suites_offered": [
+        "0xc02c",
+        "0xc030",
+        "0xc02b",
+        "0xc02f",
+        "0xcca9",
+        "0xcca8",
+        "0xc024",
+        "0xc028",
+        "0xc023",
+        "0xc027",
+        "0x009f",
+        "0x009e",
+        "0x006b",
+        "0x0067"
+      ],
+      "cipher_suite_selected": {
+        "id": "0xc030",
+        "name": "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+      },
+      "alpn_offered": [
+        "http/1.1"
+      ],
+      "ech_extension_observed": false,
+      "null_reasons": {},
+      "notes": [],
+      "packet_sizes_truncated": false,
+      "packet_size_direction_basis": "client_hello"
+    }
+  ]
+}
