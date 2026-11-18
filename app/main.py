@@ -38,7 +38,7 @@ EXIT_OK, EXIT_INPUT, EXIT_STRICT, EXIT_WRITE, EXIT_MODULE = 0, 1, 3, 4, 5
 MODULE_CANDIDATES: dict[str, list[str]] = {
     "parse_dns_pcap": ["app.dns.parser", "app.dns.dns_parser", "app.dns.pcap_parser"],
     "analyze_dns_domains": ["app.dga.analyzer", "app.dga.dga_detector", "app.dga.detector"],
-    "detect_tunnels": ["app.dns.tunnel", "app.dns.tunnel_detector", "app.dns.detector"],
+    "detect_tunnels": ["app.tunneling.detector", "app.dns.tunnel", "app.dns.tunnel_detector", "app.dns.detector"],
 }
 
 

@@ -6,3 +6,6 @@ reports/
 .env
 .env.*
 !.env.example
+
+# Local Git status captured before submission
+/handoff/evidence/fedora-final/working_tree_status.txt
