@@ -1,0 +1,59 @@
+{
+  "dataset_type": "public labelled lists (UMUDGA), test split; packets synthetic (Scapy, offline)",
+  "pcap": "dga_labeled_dns.pcap",
+  "sha256": "615eaddc9577a36b4ced3394ae23721253521dd8324a9cdc474dd7fab92844dd",
+  "expected_dns_queries": 12,
+  "expected_domains": 10,
+  "labels": [
+    {
+      "registered_domain": "siriusxm.com",
+      "label": "benign",
+      "family": "legit"
+    },
+    {
+      "registered_domain": "downloadha.com",
+      "label": "benign",
+      "family": "legit"
+    },
+    {
+      "registered_domain": "minecraftforge.net",
+      "label": "benign",
+      "family": "legit"
+    },
+    {
+      "registered_domain": "linkstars.com",
+      "label": "benign",
+      "family": "legit"
+    },
+    {
+      "registered_domain": "cartoonhd.co",
+      "label": "benign",
+      "family": "legit"
+    },
+    {
+      "registered_domain": "piqmkmmabrutqy.cc",
+      "label": "dga",
+      "family": "ranbyus_v1"
+    },
+    {
+      "registered_domain": "fyllaztzuud.com",
+      "label": "dga",
+      "family": "dircrypt"
+    },
+    {
+      "registered_domain": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru",
+      "label": "dga",
+      "family": "murofet_v3"
+    },
+    {
+      "registered_domain": "mekoadamnblecdfd.org",
+      "label": "dga",
+      "family": "padcrypt"
+    },
+    {
+      "registered_domain": "p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+      "label": "dga",
+      "family": "dyre"
+    }
+  ]
+}

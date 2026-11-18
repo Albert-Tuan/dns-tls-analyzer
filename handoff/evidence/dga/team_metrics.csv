@@ -1,0 +1,3 @@
+owner,detector,unit,split,dataset_type,n,tp,fp,tn,fn,precision,recall,f1,false_positive_rate
+TV1 Sony,dga,registered domain,test,public labelled lists (UMUDGA),13158,4796,654,5868,1840,0.88,0.7227245328511152,0.7936455402945557,0.10027598896044158
+TV2 Tuấn Anh,dns_tunnel,"(capture, client IP, registered domain, 60s window)",test,synthetic,21,6,3,9,3,0.6666666666666666,0.6666666666666666,0.6666666666666666,0.25

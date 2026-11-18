@@ -1,0 +1,416 @@
+[
+  {
+    "detector": "dga",
+    "target": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru",
+    "registered_domain": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru",
+    "dga_label": "iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz",
+    "classification": "suspicious_dga",
+    "score": 100,
+    "features": {
+      "length": 43,
+      "entropy": 4.284,
+      "digit_ratio": 0.5116,
+      "vowel_ratio": 0.1905,
+      "unique_character_ratio": 0.5349,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.8179,
+      "trigram_rarity": 0.9931,
+      "ngram_score": 0.9931,
+      "unseen_ngram_ratio": 0.9512,
+      "domain_length": 46
+    },
+    "reasons": [
+      "unusual_ngrams",
+      "high_entropy",
+      "high_digit_ratio",
+      "low_vowel_ratio",
+      "long_label"
+    ],
+    "signal_groups": [
+      "composition",
+      "length",
+      "ngram",
+      "randomness"
+    ],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.iwb68p52g53c39i15l58a47c19hynwb58m39ixl38hz.ru"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000007.0,
+      "first_frame": 15
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+    "registered_domain": "p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+    "dga_label": "p8e14fc63b0cb6dd1bb2dd4b9e86969393",
+    "classification": "suspicious_dga",
+    "score": 100,
+    "features": {
+      "length": 34,
+      "entropy": 3.6062,
+      "digit_ratio": 0.5588,
+      "vowel_ratio": 0.1333,
+      "unique_character_ratio": 0.4118,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.8281,
+      "trigram_rarity": 0.9767,
+      "ngram_score": 0.9767,
+      "unseen_ngram_ratio": 0.875,
+      "domain_length": 37
+    },
+    "reasons": [
+      "unusual_ngrams",
+      "high_entropy",
+      "high_digit_ratio",
+      "low_vowel_ratio",
+      "long_label"
+    ],
+    "signal_groups": [
+      "composition",
+      "length",
+      "ngram",
+      "randomness"
+    ],
+    "eligible": true,
+    "observations": {
+      "query_count": 3,
+      "unique_qnames": 3,
+      "sample_qnames": [
+        "a.p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+        "b.p8e14fc63b0cb6dd1bb2dd4b9e86969393.so",
+        "c.p8e14fc63b0cb6dd1bb2dd4b9e86969393.so"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000009.0,
+      "first_frame": 19
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "piqmkmmabrutqy.cc",
+    "registered_domain": "piqmkmmabrutqy.cc",
+    "dga_label": "piqmkmmabrutqy",
+    "classification": "suspicious_dga",
+    "score": 80,
+    "features": {
+      "length": 14,
+      "entropy": 3.3249,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.2143,
+      "unique_character_ratio": 0.7857,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.5386,
+      "trigram_rarity": 0.8429,
+      "ngram_score": 0.8429,
+      "unseen_ngram_ratio": 0.5833,
+      "domain_length": 17
+    },
+    "reasons": [
+      "unusual_ngrams",
+      "high_entropy",
+      "low_vowel_ratio",
+      "long_label"
+    ],
+    "signal_groups": [
+      "composition",
+      "length",
+      "ngram",
+      "randomness"
+    ],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.piqmkmmabrutqy.cc"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000005.0,
+      "first_frame": 11
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "mekoadamnblecdfd.org",
+    "registered_domain": "mekoadamnblecdfd.org",
+    "dga_label": "mekoadamnblecdfd",
+    "classification": "suspicious_dga",
+    "score": 40,
+    "features": {
+      "length": 16,
+      "entropy": 3.3278,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.3125,
+      "unique_character_ratio": 0.6875,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.4371,
+      "trigram_rarity": 0.771,
+      "ngram_score": 0.771,
+      "unseen_ngram_ratio": 0.4286,
+      "domain_length": 20
+    },
+    "reasons": [
+      "high_entropy",
+      "long_label"
+    ],
+    "signal_groups": [
+      "length",
+      "randomness"
+    ],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.mekoadamnblecdfd.org"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000008.0,
+      "first_frame": 17
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "minecraftforge.net",
+    "registered_domain": "minecraftforge.net",
+    "dga_label": "minecraftforge",
+    "classification": "suspicious_dga",
+    "score": 40,
+    "features": {
+      "length": 14,
+      "entropy": 3.3788,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.3571,
+      "unique_character_ratio": 0.7857,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.2417,
+      "trigram_rarity": 0.4713,
+      "ngram_score": 0.4713,
+      "unseen_ngram_ratio": 0.0833,
+      "domain_length": 18
+    },
+    "reasons": [
+      "high_entropy",
+      "long_label"
+    ],
+    "signal_groups": [
+      "length",
+      "randomness"
+    ],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.minecraftforge.net"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000002.0,
+      "first_frame": 5
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "fyllaztzuud.com",
+    "registered_domain": "fyllaztzuud.com",
+    "dga_label": "fyllaztzuud",
+    "classification": "benign",
+    "score": 20,
+    "features": {
+      "length": 11,
+      "entropy": 2.914,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.2727,
+      "unique_character_ratio": 0.7273,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.5019,
+      "trigram_rarity": 0.8851,
+      "ngram_score": 0.8851,
+      "unseen_ngram_ratio": 0.6667,
+      "domain_length": 15
+    },
+    "reasons": [
+      "unusual_ngrams"
+    ],
+    "signal_groups": [
+      "ngram"
+    ],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.fyllaztzuud.com"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000006.0,
+      "first_frame": 13
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "linkstars.com",
+    "registered_domain": "linkstars.com",
+    "dga_label": "linkstars",
+    "classification": "benign",
+    "score": 20,
+    "features": {
+      "length": 9,
+      "entropy": 2.9477,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.2222,
+      "unique_character_ratio": 0.8889,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.1905,
+      "trigram_rarity": 0.4496,
+      "ngram_score": 0.4496,
+      "unseen_ngram_ratio": 0.0,
+      "domain_length": 13
+    },
+    "reasons": [
+      "low_vowel_ratio"
+    ],
+    "signal_groups": [
+      "composition"
+    ],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.linkstars.com"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000003.0,
+      "first_frame": 7
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "cartoonhd.co",
+    "registered_domain": "cartoonhd.co",
+    "dga_label": "cartoonhd",
+    "classification": "benign",
+    "score": 0,
+    "features": {
+      "length": 9,
+      "entropy": 2.9477,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.3333,
+      "unique_character_ratio": 0.8889,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.2547,
+      "trigram_rarity": 0.5909,
+      "ngram_score": 0.5909,
+      "unseen_ngram_ratio": 0.1429,
+      "domain_length": 12
+    },
+    "reasons": [],
+    "signal_groups": [],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.cartoonhd.co"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000004.0,
+      "first_frame": 9
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "downloadha.com",
+    "registered_domain": "downloadha.com",
+    "dga_label": "downloadha",
+    "classification": "benign",
+    "score": 0,
+    "features": {
+      "length": 10,
+      "entropy": 2.7219,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.4,
+      "unique_character_ratio": 0.7,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.3072,
+      "trigram_rarity": 0.6079,
+      "ngram_score": 0.6079,
+      "unseen_ngram_ratio": 0.0,
+      "domain_length": 14
+    },
+    "reasons": [],
+    "signal_groups": [],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.downloadha.com"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000001.0,
+      "first_frame": 3
+    }
+  },
+  {
+    "detector": "dga",
+    "target": "siriusxm.com",
+    "registered_domain": "siriusxm.com",
+    "dga_label": "siriusxm",
+    "classification": "benign",
+    "score": 0,
+    "features": {
+      "length": 8,
+      "entropy": 2.5,
+      "digit_ratio": 0.0,
+      "vowel_ratio": 0.375,
+      "unique_character_ratio": 0.75,
+      "hyphen_count": 0,
+      "bigram_rarity": 0.443,
+      "trigram_rarity": 0.7293,
+      "ngram_score": 0.7293,
+      "unseen_ngram_ratio": 0.3333,
+      "domain_length": 12
+    },
+    "reasons": [],
+    "signal_groups": [],
+    "eligible": true,
+    "observations": {
+      "query_count": 1,
+      "unique_qnames": 1,
+      "sample_qnames": [
+        "www.siriusxm.com"
+      ],
+      "src_ips": [
+        "192.0.2.20"
+      ],
+      "first_timestamp": 1794000000.0,
+      "first_frame": 1
+    }
+  }
+]
